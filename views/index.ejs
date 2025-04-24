@@ -1176,14 +1176,89 @@
     </div>
 
 
-    <div id="discount-banner" class="promo-banner" style="background: linear-gradient(90deg, #00b5e2, #0070c9); color: #ffffff; padding: 20px 40px; display: flex; align-items: center; justify-content: center; height: 120px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);">
-        <div class="promo-banner__message" style="font-size: 2rem; font-weight: bold; text-align: center; flex: 1; letter-spacing: 1px; line-height: 1.4; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);">
-            🌊 <span style="font-size: 2.5rem; color: ;">60% OFF 2nd Guest</span> + <span style="font-size: 2.5rem; color: #fdbb13;">KIDS SAIL FREE*</span>
+    <style>
+        #discount-banner {
+          background: linear-gradient(90deg, #00b5e2, #0070c9);
+          color: #ffffff;
+          padding: 20px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: auto;
+          border-radius: 8px;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+          flex-wrap: wrap;
+          text-align: center;
+        }
+      
+        .promo-banner__message {
+          font-size: 1.8rem;
+          font-weight: bold;
+          flex: 1 1 100%;
+          letter-spacing: 1px;
+          line-height: 1.4;
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+          margin-bottom: 15px;
+        }
+      
+        .promo-banner__message span {
+          font-size: 2.3rem;
+        }
+      
+        .promo-banner__message span:last-child {
+          color: #fdbb13;
+        }
+      
+        .promo-banner__cta {
+          background-color: #fdbb13;
+          color: #003366;
+          padding: 12px 20px;
+          border-radius: 6px;
+          font-weight: bold;
+          font-size: 1.4rem;
+          text-align: center;
+          margin: 0 auto;
+        }
+      
+        .promo-banner__cta a {
+          text-decoration: none;
+          color: inherit;
+          display: inline-block;
+        }
+      
+        /* Media Queries */
+        @media (min-width: 576px) {
+          #discount-banner {
+            flex-wrap: nowrap;
+            padding: 20px 40px;
+          }
+      
+          .promo-banner__message {
+            flex: 1;
+            margin-bottom: 0;
+            font-size: 2rem;
+          }
+      
+          .promo-banner__cta {
+            font-size: 1.5rem;
+            margin-left: 30px;
+          }
+      
+          .promo-banner__message span {
+            font-size: 2.5rem;
+          }
+        }
+      </style>
+      
+      <div id="discount-banner" class="promo-banner">
+        <div class="promo-banner__message">
+          🌊 <span>60% OFF 2nd Guest</span> + <span>KIDS SAIL FREE*</span>
         </div>
-        <div class="promo-banner__cta" style="background-color: #fdbb13; color: #003366; padding: 15px 25px; border-radius: 6px; font-weight: bold; margin-left: 30px; text-align: center; display: flex; align-items: center; justify-content: center;">
-            <a href="tel:+1234567890" style="text-decoration: none; color: inherit; font-size: 1.5rem; font-weight: bold;">CALL NOW: +1 (234) 567-890</a>
+        <div class="promo-banner__cta">
+          <a href="tel:+1234567890">CALL NOW: +1 (234) 567-890</a>
         </div>
-    </div>
+      </div>
+      
     
     
 
