@@ -3031,212 +3031,6 @@ Las Vegas, NV 89144, USA
     })();
 </script>
 
-<style>
-    .d-lg-none {
-          display: none !important;
-      }  
-      
-      #boxes{ display:none;}
-      
-       .modal.fade.show {
-          opacity: 1;
-          padding: 0 !important;
-          overflow: unset;
-          background: rgba(0, 0, 0, .85);
-          text-align: center;    z-index: 9999999999;
-      }   
-  .popup-content {
-      background-color: #fff;
-      margin: 6% auto;
-      padding: 8px;
-      border: 1px solid #00185e;
-      width: 96%;
-      max-width: 375px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
-      border-radius: 8px;
-      text-align: center;
-  }
-  .custompopup .modal-footer.border-0 {
-      margin-top: 0px;
-  }
-  
-  .border-0 {
-      border: 0 !important;
-  }
-  .modal-footer {
-      display: flex;
-      flex-shrink: 0;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: flex-end;
-      padding: calc(var(--bs-modal-padding) - var(--bs-modal-footer-gap)* .5);
-      background-color: var(--bs-modal-footer-bg);
-      border-top: var(--bs-modal-footer-border-width) solid var(--bs-modal-footer-border-color);
-      border-bottom-right-radius: var(--bs-modal-inner-border-radius);
-      border-bottom-left-radius: var(--bs-modal-inner-border-radius);
-  }
-  .pt-0 {
-      padding-top: 0 !important;
-  }
-  
-  .modal-content {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      color: var(--bs-modal-color);
-      pointer-events: auto;
-      background-color: var(--bs-modal-bg);
-      background-clip: padding-box;
-      border: var(--bs-modal-border-width) solid var(--bs-modal-border-color);
-      border-radius: var(--bs-modal-border-radius);
-      outline: 0;
-  }
-  .modal-content {
-      background: hsla(0, 0%, 100%, 0) !important;
-  }
-  .modal.show .modal-dialog {
-      transform: none;
-  }
-  .modal.fade .modal-dialog {
-      transition: transform .3s ease-out;
-      transform: translateY(-50px);
-  }
-  @media (max-width: 767px) {
-      .modal.show .modal-dialog {
-          margin: 0;
-      }
-  }
-  .modal-dialog-centered {
-      display: flex;
-      align-items: center;
-      min-height: calc(100% - var(--bs-modal-margin)* 2);
-  }
-  .modal-dialog {
-      position: relative;
-      width: auto;
-      margin: var(--bs-modal-margin);
-      pointer-events: none;
-  }
-  
-  .header-logo {
-      width: auto;
-      margin-bottom: 20px;
-      margin-left: 40px;
-      margin-top: 10px;
-  }
-  .support-no {
-      font-size: 32px;
-      font-weight: 700;
-      color: #ff5722;
-  }
-  hr {
-      width: 100%;
-      height: 3px !important;
-      color: #da552f !important;
-     
-      margin-top: 0 !important;
-      margin: 1rem 0;
-     
-      border: 0;
-      border-top: var(--bs-border-width) solid;
-      opacity: .25;
-  }
-  .justify-content-center {
-      justify-content: center !important;
-  }
-  
-  .row {
-      --bs-gutter-x: 1.5rem;
-      --bs-gutter-y: 0;
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: calc(-1* var(--bs-gutter-y));
-      margin-right: calc(-.5* var(--bs-gutter-x));
-      margin-left: calc(-.5* var(--bs-gutter-x));
-  }
-  .align-self-center {
-      align-self: center !important;
-  }
-  .arrow-list {
-      list-style-type: none;
-      padding: 0;
-      text-align: left;
-      font-weight: 500;
-  }
-  .arrow-list li, .arrow-list li:hover {
-      background: linear-gradient(90deg, #4d8cff, #fff);
-  }
-  
-  .arrow-list li {
-      position: relative;
-      color: #00185e;
-      padding: 1px 0 0 7px !important;
-      margin: 12px 0 !important;
-      cursor: pointer;
-      transition: background .3s;
-      border-radius: 12px 0;
-      
-      font-size: 16px;
-      line-height: 1.9;
-      font-weight: 400;
-  }
-  .call-offers {
-      width: 92%;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-      background: #00308D;
-      padding: 10px 15px;
-      border-radius: 5px;
-      color: #fff;
-      text-align: left;
-      margin-top: 12px;
-  }
-  .call-offers h4 {
-      font-size: 24px;
-  }
-  p.mb-0 {
-      font-size: 13px;
-  }
-  p.mb-0 small {
-      color: #fff;
-      background-color: #0f4ab5;
-      border-radius: 5px;
-      padding: 3px;
-      font-weight: 400;
-      letter-spacing: 1px;
-  }
-  .custompopup h4 {
-      margin-top: 10px;
-      color: #fff;
-      font-size: 25px;
-      line-height: 30px;
-      font-weight: 700;
-  }
-  
-  @media (min-width:320px) and (max-width:767px){
-      .d-block {display: block !important;}
-   .btn-secondary {
-          font-size: 14px;
-          font-weight: 600;
-          border-radius: 20px;
-          background: rgba(0, 74, 173, 0) !important;
-          color: #ed942d !important;
-          border: 0;
-          padding: 10px 30px !important;
-          right: -3px !important;
-          position: relative !important;
-          top: 79px !important;
-          border: none !important;
-      }   
-      
-     #boxes{ display:block;} 
-      
-  }    
-      
-  </style>
-
 
 <style>
     .image-slider-section .swiper {
@@ -3460,14 +3254,35 @@ Las Vegas, NV 89144, USA
   }    
       
   </style>
+<script>
+    // Function to check if the user is on a mobile device
+    function isMobileDevice() {
+        return window.innerWidth <= 767; // Adjust breakpoint as needed
+    }
+
+    // Function to show the popup after 15 seconds on mobile devices
+    function showPopupAfterDelay() {
+        if (isMobileDevice()) {
+            setTimeout(function () {
+                var popup = document.getElementById("boxes");
+                if (popup) {
+                    popup.style.display = "block";
+                }
+            }, 15000); // 15 seconds delay
+        }
+    }
+
+    // Call the function on page load
+    document.addEventListener("DOMContentLoaded", showPopupAfterDelay);
+</script>
 
     
-<script>
+<!-- <script>
     function closePopup() {
         var popup = document.getElementById("boxes");
         popup.style.display = "none";
     }
-</script>
+</script> -->
 <script>
     const swiper = new Swiper(".mySwiper", {
       loop: true,
