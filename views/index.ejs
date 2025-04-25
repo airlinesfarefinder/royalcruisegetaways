@@ -2512,72 +2512,87 @@ Explore Cruise Deals
         }
     </style> -->
    <!-- Cruise Popup (Mobile Friendly) -->
-<div id="boxes" class="col-sm-6 col-sm-offset-3">
+   <div id="boxes" class="col-sm-6 col-sm-offset-3">
     <a href="tel:(888) 676-4644">
-      <div class="d-block d-md-block d-lg-none">
-        <div class="modal fade show custompopup" style="display: block;">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content pt-0">
-              <!-- Close Button -->
-              <div class="modal-footer border-0 justify-content-end">
-                <p onclick="myFunction1()" class="btn-secondary m-0 p-1">
-                  <i class="fa fa-close" aria-hidden="true"></i>
-                </p>
-              </div>
-  
-              <!-- Popup Body -->
-              <div class="popup-content text-center">
-                <!-- Royal Caribbean Logo -->
-                <img
-                  src="images/royal-caribbean-logo.png"
-                  alt="Royal Caribbean Logo"
-                  class="header-logo mb-3"
-                  width="130"
-                  height="40"
-                />
-  
-                <!-- Cruise Ship Image -->
-                <img
-                  src="images/cruise-ship.png"
-                  alt="Cruise Ship"
-                  class="img-fluid mb-3"
-                  style="max-width: 100px;"
-                />
-  
-                <p><strong>Speak with a cruise expert and save up to 40%</strong></p>
-  
-                <h2 class="support-no text-primary">
-                  <i class="fas fa-headset"></i> (888) 676-4644
-                </h2>
-  
-                <hr>
-  
-                <h5>24/7 Cruise Booking Support</h5>
-  
-                <div class="row justify-content-center text-left">
-                  <div class="col-12">
-                    <ul class="arrow-list">
-                      <li>Caribbean Cruise Deals</li>
-                      <li>Book Your Cabin</li>
-                      <li>Customer Support</li>
-                      <li>Flexible Cancellations</li>
-                    </ul>
-                  </div>
+        <div class="d-block d-md-block d-lg-none">
+            <div class="modal fade show custompopup" style="display: block;">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content pt-0">
+                        <!-- Close Button -->
+                        <div class="close-button-container">
+                            <p onclick="myFunction1()" class="m-0 p-1">
+                                <i class="fa fa-close" aria-hidden="true"></i>
+                            </p>
+                        </div>
+
+                        <!-- Popup Body -->
+                        <div class="popup-content text-center">
+                            <!-- Royal Caribbean Logo -->
+                            <img src="images/royal-caribbean-logo.png" alt="Royal Caribbean Logo" class="header-logo mb-3" width="130" height="40" />
+
+                            <!-- Cruise Ship Image -->
+                            <img src="images/cruise-ship.png" alt="Cruise Ship" class="img-fluid mb-3" style="max-width: 100px;" />
+
+                            <p><strong>Speak with a cruise expert and save up to 40%</strong></p>
+
+                            <h2 class="support-no text-primary">
+                                <i class="fas fa-headset"></i> (888) 676-4644
+                            </h2>
+
+                            <hr>
+
+                            <h5>24/7 Cruise Booking Support</h5>
+
+                            <div class="row justify-content-center text-left">
+                                <div class="col-12">
+                                    <ul class="arrow-list">
+                                        <li>Caribbean Cruise Deals</li>
+                                        <li>Book Your Cabin</li>
+                                        <li>Customer Support</li>
+                                        <li>Cancellation & Refunds</li>
+                                        <li>Quick & Easy Changes/Rebook</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div> <!-- /popup-content -->
+                    </div>
                 </div>
-              </div> <!-- /popup-content -->
             </div>
-          </div>
         </div>
-      </div>
     </a>
-  </div>
-  
-  <!-- Close Popup Script -->
-  <script>
-    function myFunction1() {
-      document.querySelector('.custompopup').style.display = 'none';
+</div>
+
+<style>
+    /* Ensure the close button is positioned at the top-right corner */
+    .close-button-container {
+        position: absolute;
+        top: 30px;
+        right: 25px;
+        z-index: 10;
     }
-  </script>
+
+    .close-button-container p {
+        background: none; /* Remove background */
+        border: none; /* Remove border */
+        width: auto;
+        height: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+    }
+
+    .close-button-container p i {
+        font-size: 20px; /* Adjust size of the close icon */
+        color: #333; /* Set the color of the close icon */
+    }
+</style>
+
+<script>
+    function myFunction1() {
+        document.querySelector('.custompopup').style.display = 'none';
+    }
+</script>
   
     
       
@@ -3187,7 +3202,7 @@ Las Vegas, NV 89134, USA
   .header-logo {
       width: auto;
       margin-bottom: 20px;
-      margin-left: 40px;
+      margin-left: -20px;
       margin-top: 10px;
   }
   .support-no {
