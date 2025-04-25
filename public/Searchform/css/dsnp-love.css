@@ -1,0 +1,20 @@
+
+@media (min-width:320px) and (max-width:767px){
+    select.form-control.cruiseline {
+        height: 31px;
+        padding: 1px 11px 0px 14px;
+        border: transparent;
+    }
+    .ffrms_ppd.dt {
+        border: solid 1px #00bcd4;
+        margin: 5px 1%!important;
+        border-radius: 4px;
+        background: #f4feff;
+        width: 48%;
+        float: left;
+    }
+    .rsts.ffrms_ppd {
+            margin: 5px 1%!important;}
+    
+    
+    }

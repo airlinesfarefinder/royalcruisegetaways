@@ -496,9 +496,9 @@
                     <link rel="stylesheet" type="text/css" href="Searchform/css/style.css">
                     <script src="Searchform/js/jquery.min.js"></script>
                     <script src="Searchform/js/bootstrap.min.js"></script>
-                    <div class="tab-pane in active" id="tab1default">
+                    <!-- <div class="tab-pane in active" id="tab1default">
                         <h4 class="easy_srch"> Flights </h4>
-                        <div class="form_bx">
+                        <div class="form_bx"> -->
                             <form method="GET" action="https://royalcruisegetaways.com/book" onsubmit="return first_form()">
                                 <div class="col-sm-12">
                                     <div class="row">
@@ -517,149 +517,113 @@
                                     </div>
                                 </div>
 
-                                <div class="row fm_ln1">
-                                    <div class="rsts ffrms_ppd">
-                                        <div class="res_hh"> From </div>
-                                        <div class="form-group dst_date">
-                                            <label class="frm_llbs"> <img src="Searchform/images/se_dep_icon.svg"> </label>
-                                            <input type="text" required="required" class="form-control ipt1 location-fld serlocation fromshort" autocomplete="off" placeholder="City or airport" name="origin1" id="location" onclick="clearInput2()">
-                                            <p class="fromfull"> City Name </p>
-                                        </div>
-                                    </div>
-                                    <div class="rsts ffrms_ppd">
-                                        <div class="res_hh"> To </div>
-                                        <div class="form-group dst_date">
-                                            <label class="frm_llbs"> <img src="Searchform/images/se_arrival_icon.svg"> </label>
-                                            <input required="required" type="text" class="form-control ipt1 location-fld serlocation toshort" placeholder="City or airport" name="destination1" autocomplete="off" id="location2" onclick="clearInput()">
-                                            <p class="tofull"> City Name </p>
-                                        </div>
-                                    </div>
-                                    <div class="detyr_dy ffrms_ppd">
-                                        <div class="mnbd_rres">
-                                            <div class="res_hh"> Departure Date </div>
-                                            <div class="form-group dst_date">
-                                                <label class="frm_llbs"> <img src="Searchform/images/se_calender_icon.svg" style="width: 20px;"> </label>
-                                                <input id="depDt" name="departDate1" type="hidden" value=''>
-                                                <input type="text" class="form-control ipt1 readtrue" id="datepicker" required="required" autocomplete="off" placeholder="Depart" name="departDate1" readonly="true" value=''>
-                                                <p id='datepicker_label'> Select Day </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <style>
-                                        .readtrue {
-                                            cursor: pointer !important;
-                                            background-color: #fff !important;
-                                            opacity: 1;
-                                        }
-
-                                        .form-control[disabled] {
-                                            background: #a9a9a9 !important;
-                                            opacity: 0.4;
-                                        }
-                                    </style>
-                                    <div class="detyr_dy ffrms_ppd">
-                                        <div class="mnbd_rres">
-                                            <div class="res_hh"> Return Date </div>
-                                            <div class="form-group dst_date">
-                                                <label class="frm_llbs"> <img src="Searchform/images/se_calender_icon.svg" style="width: 20px;"> </label>
-                                                <input id="retDt" name="returnDate1" type="hidden" value=''>
-                                                <input type="text" autocomplete="off" class="form-control ipt1 readtrue" required="required" id="datepicker2" placeholder="Return" name="returnDate1" readonly="true" value=''>
-                                                <p id='datepicker2_label'> Select Day </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="all_pmssngr ffrms_ppd">
-                                        <div class="hdfggf">
-                                            <div class="res_hh"> TRAVELLERS & CLASS </div>
-                                            <div class="form-group dst_date">
-                                                <label class="frm_llbs"> <img src="Searchform/images/se_psng_icon.svg" style="width: 20px;"> </label>
-                                                <input type="text" class="form-control ipt1 readtrue" placeholder="Passengers 1" name="" id="btm_clk" readonly="true">
-                                                <div class="psg_dls" style="display: none;">
-                                                    <div class="row">
-                                                        <div class="col-sm-5 col-4">
-                                                            <div class="pass_bx">
-                                                                <label>Adults <small>(+17 yrs)</small></label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-7 col-8">
-                                                            <div class="pass_bx">
-                                                                <div class="input-group number-spinner">
-                                                                    <span class="input-group-btn">
-                                    <a class="btn mns_btn" data-dir="dwn" onclick="decrease_adult_rt()"><i class="fa fa-minus"></i></a>
-                                    </span>
-                                                                    <input type="text" id="AdultsRT" class="form-control text-center add_num" name="adults" value="1">
-                                                                    <span class="input-group-btn">
-                                    <a class="btn add_btn" data-dir="up" onclick="increase_adult_rt()"><i class="fa fa-plus"></i></a>
-                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-5 col-4">
-                                                            <div class="pass_bx">
-                                                                <label>Child <small>(0-17 yrs)</small></label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-7 col-8">
-                                                            <div class="pass_bx">
-                                                                <div class="input-group number-spinner">
-                                                                    <span class="input-group-btn">
-                                    <a class="btn mns_btn" data-dir="dwn" onclick="decrease_child_rt()"><i class="fa fa-minus"></i></a>
-                                    </span>
-                                                                    <input type="text" id="ChildrenRT" class="form-control text-center add_num" name="childs" value="0">
-                                                                    <span class="input-group-btn">
-                                    <a class="btn add_btn" data-dir="up" onclick="increase_child_rt()"><i class="fa fa-plus"></i></a>
-                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="row">
-                                                        <div class="col-sm-5 col-4">
-                                                            <div class="pass_bx">
-                                                                <label> Infant <small>(Upto 2 yrs)</small></label>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-sm-7 col-8">
-                                                            <div class="pass_bx">
-                                                                <div class="input-group number-spinner">
-                                                                    <span class="input-group-btn">
-                                    <a class="btn mns_btn" data-dir="dwn" onclick="decrease_infant_rt()"><i class="fa fa-minus" ></i></a>
-                                    </span>
-                                                                    <input type="text" class="form-control text-center add_num" id="InfantsRT" name="infants" value="0">
-                                                                    <span class="input-group-btn">
-                                    <a class="btn add_btn" data-dir="up" onclick="increase_infant_rt()"><i class="fa fa-plus"></i></a>
-                                    </span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="bncfr_ccrty">
-                                                        <div class="col-md-12 col-xs-12 ffrms_ppd">
-                                                            <div class="form-group" style="margin: 0;">
-                                                                <select class="form-control Nhgsdrt" id="classType" name="classType" placeholder="Economy">
-                                    <option selected="selected" value="Y">Economy</option>
-                                    <option value="S"> Premium Economy </option>
-                                    <option value="C"> Business Class </option>
-                                    <option value="F"> First Class </option>
-                                 </select>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-sm-12 col-xs-6">
-                                                        <div class="btn_dn">
-                                                            <button type="button" onclick="all_pesenger();" class="btn_done">Done</button>
-                                                        </div>
-                                                    </div>
+                                <div class="tab-pane in active" id="tab1default">
+                                    <div class="form_bx">
+                                       <form method="GET" action="https://www.cruise-reservation.com/book.php" onsubmit="return first_form()">
+                                          <!--<div class="col-sm-12">
+                                             <div class="row">
+                                                <div class="flight_type">
+                                                   <div class="form-check-inline">
+                                                      <label class="radio-inline customradio">Round Trip
+                                                      <input type="radio" checked="checked" onClick="show_date(this.value)" value="roundtrip" name="tripType">
+                                                      <span class="checkmark"></span>
+                                                      </label>
+                                                      <label class="radio-inline customradio">One Way
+                                                      <input type="radio" onClick="show_date(this.value)" value="oneway" name="tripType">
+                                                      <span class="checkmark"></span>
+                                                      </label>
+                                                   </div>
                                                 </div>
-                                            </div>
-                                        </div>
+                                             </div>
+                                          </div>-->
+                                          
+                                          <div class="row fm_ln1">
+                                             <div class="rsts ffrms_ppd">
+                                                <div class="res_hh">  Cruise Departure Ports  </div>
+                                                <div class="form-group dst_date">
+                                                   <input type="text" required="required" class="form-control ipt1 location-fld serlocation fromshort ui-autocomplete-input" autocomplete="off" name="origin1" id="location" onclick="clearInput2()">
+                                                </div>
+                                             </div>
+                                             
+                                             <div class="col-md-2 col-xs-6 ffrms_ppd dt">
+                                                <div class="mnbd_rres1">
+                                                   <div class="res_hh">  Departure Date </div>
+                                                   <div class="form-group dst_date">
+                                                      <input id="depDt" type="hidden" name="departDate1" value="">
+                                                      <input type="text" class="form-control ipt1 readtrue hasDatepicker" id="datepicker" required="required" autocomplete="off" placeholder="Depart" name="departDate1" readonly="true" value="">
+                                                      
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <style>
+                                                .readtrue{ cursor: pointer !important; background-color: #fff !important; opacity: 1;}
+                                                .form-control[disabled] { background: #a9a9a9 !important; opacity: 0.4;}
+                                             </style>
+                                             <div class="col-md-2 col-xs-6 ffrms_ppd dt">
+                                                <div class="mnbd_rres1">
+                                                   <div class="res_hh">  Return Date </div>
+                                                   <div class="form-group dst_date">
+                                                      <input id="retDt" type="hidden" name="returnDate1" value="">
+                                                      <input type="text" autocomplete="off" class="form-control ipt1 readtrue hasDatepicker" required="required" id="datepicker2" placeholder="Return" name="returnDate1" readonly="true" value="">
+                                                      
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             
+                                             <div class="rsts ffrms_ppd">
+                                                <div class="res_hh">  Cruise Line  </div>
+                                                <div class="form-group dst_date">
+                                                    
+                                                    <select class="form-control cruiseline" name="destination1" placeholder="Cruise Line">
+                                                                     <option selected="selected">Cruise Line</option>
+                                                                     <option value="MSC Cruises">MSC Cruises</option>
+                                 <option value="Royal Caribbean International">Royal Caribbean International</option>
+                                 <option value="Carnival Cruise Lines">Carnival Cruise Lines</option>
+                                 <option value="Norwegian Cruise Line">Norwegian Cruise Line</option>
+                                 <option value="Princess Cruises">Princess Cruises</option>
+                                 <option value="Holland America Line">Holland America Line</option>
+                                 <option value="Cunard">Cunard</option>
+                                 <option value="Disney Cruise Line">Disney Cruise Line</option>
+                                 <option value="Celebrity Cruises">Celebrity Cruises</option>
+                                 <option value="Silversea">Silversea</option>
+                                 <option value="Regent Seven Seas">Regent Seven Seas</option>
+                                 <option value="Costa Cruises">Costa Cruises</option>
+                                 <option value="Celestyal Cruises">Celestyal Cruises</option>
+                                 <option value="Oceania Cruises">Oceania Cruises</option>
+                                 <option value="Azamara Club Cruises">Azamara Club Cruises</option>
+                                 <option value="Viking Expeditions Cruises">Viking Expeditions Cruises</option>
+                                 <option value="Virgin Voyages">Virgin Voyages</option>
+                                 <option value="Seabourn">Seabourn</option>
+                                 <option value="Hurtigruten Expeditions">Hurtigruten Expeditions</option>
+                                 <option value="Viking Ocean Cruises">Viking Ocean Cruises</option>
+                                 <option value="Hurtigruten Norwegian Coastal Express">Hurtigruten Norwegian Coastal Express</option>
+                                 <option value="Explora Journeys">Explora Journeys</option>
+                                                                  </select>
+                                                  
+                                                </div>
+                                             </div>
+                                             <div class="col-md-2 col-xs-12 ffrms_ppd">
+                                                <div class="hdfggf">
+                                                   <div class="res_hh"> Duration (Nights)</div>
+                                                   <div class="form-group dst_date">
+                                                      <select class="form-control cruiseline" name="Duration" placeholder="Duration (Nights)">
+                                                                     <option selected="selected">Duration (Nights)</option>
+                                                                     <option value="2 to 3 nights">2 to 3 nights</option>
+                                                                     <option value=" 4 to 6 nights"> 4 to 6 nights</option>
+                                                                     <option value=" 7 to 9 nights"> 7 to 9 nights</option>
+                                                                     <option value=" 10 to 13 nights"> 10 to 13 nights</option>
+                                                                     <option value="  14 and more nights">  14 and more nights</option>
+                                                                  </select>
+                                                   </div>
+                                                </div>
+                                             </div>
+                                             <div class="col-md-1 col-xs-12 ffrms_ppd" style="text-align:center;">
+                                                <button type="sumit" name="submitForm"> Search </button>
+                                             </div>
+                                          </div>
+                                       </form>
                                     </div>
-                                    <div class="Dprd_sde ffrms_ppd" style="text-align:center;">
-                                        <button type="sumit" name="submitForm"> <i class="fa fa-search"></i> </button>
-                                    </div>
-                                </div>
+                                 </div>
                                 <!--<div class="row_types">
             <div class="flight_type_tgfsr">
             
