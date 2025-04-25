@@ -148,6 +148,30 @@
           justify-content: center;
           align-items: center;
       }
+
+      ul.list-view-items1 {
+      list-style-type: none;
+      display: flex;
+      flex-wrap: wrap;
+      padding: 0;
+      justify-content: space-between;
+      margin: 0;
+      gap: 1rem; /* Add spacing between items */
+  }
+
+  ul.list-view-items1 li {
+      color: #fff;
+      text-align: center;
+      font-size: 16px;
+      line-height: 26px;
+      font-weight: 400;
+      background: #0f4ab5;
+      padding: 10px;
+      border-radius: 4px;
+      flex: 1 1 calc(50% - 1rem); /* Two items per row with spacing */
+      box-sizing: border-box;
+  }
+
       .bannerInner {
           background-color: rgba(255,255,255,0.5);
           width: 100%;
@@ -398,6 +422,11 @@
           
       }    
       
+      @media (max-width: 767px) {
+      ul.list-view-items1 li {
+          flex: 1 1 100%; /* One item per row on small screens */
+      }
+  }
       
       </style>
 
